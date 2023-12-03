@@ -1,5 +1,6 @@
 # babicmila.github.io
 
-#My Projects
+# My Projects
 
-Online Marketplace: https://babicmila.github.io/marketplace/
+[Online Marketplace](https://babicmila.github.io/marketplace/)
+
