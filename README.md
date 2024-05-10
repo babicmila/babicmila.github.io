@@ -1,6 +1,6 @@
-# babicmila.github.io
+# Mila Babic
 
-# My Projects
+## My Projects
 
-[Online Marketplace](https://babicmila.github.io/marketplace/)
+[Carbon Footprint Tracker](https://github.com/babicmila/carbon-footprint-tracker)
 
