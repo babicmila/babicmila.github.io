@@ -5,6 +5,22 @@
     list-style: none;
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fade-in ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 html {
     margin: 10px;
     scroll-behavior: smooth;
@@ -18,6 +34,15 @@ header {
     align-items: center;
     justify-content: space-between;
     transition: all .50s ease;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    align-self: center;
 }
 
 h1 {
@@ -79,15 +104,15 @@ nav {
     align-items: center;
     justify-content: center;
     margin-top: 80px;
+    animation: none;
 }
 
 #about-text {
     flex-direction: column;
 }
 
-#about-image {
+#about-image img {
     margin-left: 50px;
-
 }
 
 #profile-photo {
@@ -124,17 +149,82 @@ nav {
 
 }
 
+@supports (animation-timeline: view()) {
+@keyframes shadow-in {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 5
+    }
+}
+}
+
+#skills, #projects, #certifications, #contact{
+    animation-name: shadow-in;
+    animation-timeline: view();
+}
+
+.title {
+    align-self: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+#skills-icons {
+    align-items: center;
+    align-self: center;
+    width: 45%;
+}
+
+#skills-icons li {
+    display: inline-flex;
+    margin-right: 25px;
+    margin-top: 35px;
+}
+
+#skills-icons img {
+    width: 4rem;
+}
+
+#projects-div {
+    display: inline-block;
+    flex-direction: row;
+    margin-top: 50px;
+    animation-name: shadow-in2;
+}
+
+#projects-div div {
+    display: inline-block;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.project-photo {
+    width: 280px;
+    border-radius: 10%;
+}
+
+.project-photo:hover{
+    opacity: 0.5;
+}
+
 @media screen and (max-width: 770px) {
 
     .nav-links {
         display: none;
     }
 
-    .right-nav{
+    .right-nav {
         display: flex;
     }
 
-    #about{
+    #about {
         display: inline-block;
     }
 }
